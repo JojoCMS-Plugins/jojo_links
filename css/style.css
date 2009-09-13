@@ -1,0 +1,8 @@
+div.link img {
+  float: right;
+  margin: 5px;
+}
+
+div.link {
+  clear: right;
+}
