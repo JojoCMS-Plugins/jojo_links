@@ -27,11 +27,11 @@ class JOJO_Plugin_Jojo_links extends JOJO_Plugin
         $content = array();
 
         if (Jojo::tableexists('linkcategory'))  {
-            $linkcategorys = Jojo::selectQuery("SELECT * FROM linkcategory, link WHERE lk_categoryid=linkcategoryid GROUP BY linkcategoryid ORDER BY lc_order, lc_name"); //the join strips out categories with no links
+            $linkcategorys = Jojo::selectQuery("SELECT * FROM {linkcategory}, {link} WHERE lk_categoryid=linkcategoryid GROUP BY linkcategoryid ORDER BY lc_order, lc_name"); //the join strips out categories with no links
             $smarty->assign('linkcategorys', $linkcategorys);
         }
 
-        $links = Jojo::selectQuery("SELECT * FROM link WHERE 1 ORDER BY lk_order, lk_name");
+        $links = Jojo::selectQuery("SELECT * FROM {link} WHERE 1 ORDER BY lk_order, lk_name");
         /* ensure images aren't broken */
         $n = count($links);
         for ($i=0;$i<$n;$i++) {
