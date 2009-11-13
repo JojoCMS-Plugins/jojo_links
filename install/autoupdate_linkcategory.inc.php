@@ -30,7 +30,7 @@ $default_td[$table]['td_rolloverfield'] = '';
 $default_td[$table]['td_orderbyfields'] = 'lc_order';
 $default_td[$table]['td_topsubmit'] = 'yes';
 $default_td[$table]['td_deleteoption'] = 'yes';
-$default_td[$table]['td_menutype'] = 'dtree';
+$default_td[$table]['td_menutype'] = 'list';
 $default_td[$table]['td_help'] = '';
 
 /* Link Category ID */
