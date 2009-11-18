@@ -20,7 +20,7 @@
   </div>
 {/section}
 
-{else}
+{elseif $links}
 
 {section name=lk loop=$links}
   <!-- [{$links[lk].lk_name}] -->
@@ -31,8 +31,8 @@
     <a href="{$links[lk].lk_url}" target="_BLANK" title="{$links[lk].lk_url|replace:"http://":""}">{$links[lk].lk_url}</a></p>
   </div>
 
-{sectionelse}
-  <p>There are currently no links in our database.</p>
 {/section}
+{else}
+<p>There are currently no links in our database.</p>
 {/if}
 </div>
